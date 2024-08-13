@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const ResultText = ({list}) => {
-
-  const showResult = () => {
+class ResultText extends Component  {
+  render(){
+   const {list} = this.props;
+  const  showResult = () => {
     const res = list.reduce((prev, cur) => {
       if (prev.voice > cur.voice) {
         return prev;
@@ -13,9 +14,7 @@ const ResultText = ({list}) => {
 return res;
   };
 
-  const {voice, smile} = showResult();
-
-
+const {voice, smile} = showResult();
   return (
     <div className='inner-result'>
       <h2 className='title_winer'>winner</h2>
@@ -23,6 +22,13 @@ return res;
    <p className='count_text'>Number of votes: {voice}</p>
     </div>
   )
+
+  }
+
+
+
+
+
 }
 
 export default ResultText
