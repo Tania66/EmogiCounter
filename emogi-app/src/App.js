@@ -1,7 +1,7 @@
 import { Component } from "react";
 import "./App.css";
-import EmogiList from "./EmogiList/EmogiList";
-import ResultText from "./ResultText/ResultText";
+import EmogiList from "./components/EmogiList/EmogiList";
+import ResultText from "./components/ResultText/ResultText";
 
 class App extends Component {
   constructor() {
